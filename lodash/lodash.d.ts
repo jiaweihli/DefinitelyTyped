@@ -3,9 +3,11 @@
 // Definitions by: Brian Zengel <https://github.com/bczengel>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
-declare var _: _.LoDashStatic;
+declare var lodash = _;
 
-declare module _ {
+var _: _.LoDashStatic;
+
+module _ {
     interface LoDashStatic {
         /**
         * Creates a lodash object which wraps the given value to enable intuitive method chaining.
@@ -314,7 +316,7 @@ declare module _ {
     //_.findIndex
     interface LoDashStatic {
         /**
-        * This method is like _.find except that it returns the index of the first element that passes 
+        * This method is like _.find except that it returns the index of the first element that passes
         * the callback check, instead of the element itself.
         * @param array The array to search.
         * @param {(Function|Object|string)} callback The function called per iteration. If a property name or object is provided it will be 
@@ -424,7 +426,7 @@ declare module _ {
         * truey. The callback is bound to thisArg and invoked with three arguments; (value, 
         * index, array).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback 
+        * If a property name is provided for callback the created "_.pluck" style callback
         * will return the property value of the given element.
         *
         * If an object is provided for callback the created "_.where" style callback will return ]
@@ -750,10 +752,10 @@ declare module _ {
         * the array is passed through the callback before flattening. The callback is bound to 
         * thisArg and invoked with three arguments; (value, index, array).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param array The array to flatten.
         * @param shallow If true then only flatten one level, optional, default = false.
@@ -976,10 +978,10 @@ declare module _ {
         * returns truey. The callback is bound to thisArg and invoked with three arguments; 
         * (value, index, array).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param array The array to query.
         * @param n Leaves this many elements behind, optional.
@@ -1082,10 +1084,10 @@ declare module _ {
         * elements at the end of the array are returned as long as the callback returns truey. 
         * The callback is bound to thisArg and invoked with three arguments; (value, index, array).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param array The array to query.
         * @return Returns the last element(s) of array.
@@ -1242,10 +1244,10 @@ declare module _ {
         * an array of removed elements. The callback is bound to thisArg and invoked with three 
         * arguments; (value, index, array).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param array The array to modify.
         * @param callback The function called per iteration.
@@ -1301,15 +1303,15 @@ declare module _ {
     //_.rest
     interface LoDashStatic {
         /**
-        * The opposite of _.initial this method gets all but the first element or first n elements of 
+        * The opposite of _.initial this method gets all but the first element or first n elements of
         * an array. If a callback function is provided elements at the beginning of the array are excluded 
         * from the result as long as the callback returns truey. The callback is bound to thisArg and 
         * invoked with three arguments; (value, index, array).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will return 
+        * If a property name is provided for callback the created "_.pluck" style callback will return
         * the property value of the given element.
         * 
-        * If an object is provided for callback the created "_.where" style callback will return true 
+        * If an object is provided for callback the created "_.where" style callback will return true
         * for elements that have the properties of the given object, else false.
         * @param array The array to query.
         * @param {(Function|Object|number|string)} [callback=1] The function called per element or the number 
@@ -1528,10 +1530,10 @@ declare module _ {
         * is provided it will be executed for value and each element of array to compute their sort 
         * ranking. The callback is bound to thisArg and invoked with one argument; (value).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param array The sorted list.
         * @param value The value to determine its index within `list`.
@@ -1615,10 +1617,10 @@ declare module _ {
         * uniqueness is computed. The callback is bound to thisArg and invoked with three arguments; 
         * (value, index, array).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param array Array to remove duplicates from.
         * @param isSorted True if `array` is already sorted, optiona, default = false.
@@ -2199,10 +2201,10 @@ declare module _ {
         * of times the key was returned by the callback. The callback is bound to thisArg and 
         * invoked with three arguments; (value, index|key, collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -2284,10 +2286,10 @@ declare module _ {
         * The callback is bound to thisArg and invoked with three arguments; (value, index|key, 
         * collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -2445,10 +2447,10 @@ declare module _ {
         * callback returns truey for. The callback is bound to thisArg and invoked with three 
         * arguments; (value, index|key, collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -2648,10 +2650,10 @@ declare module _ {
         * returns truey for. The callback is bound to thisArg and invoked with three arguments; 
         * (value, index|key, collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param collection Searches for a value in this list.
         * @param callback The function called per iteration. 
@@ -2897,7 +2899,7 @@ declare module _ {
     //_.findLast
     interface LoDashStatic {
         /**
-        * This method is like _.find except that it iterates over elements of a collection from 
+        * This method is like _.find except that it iterates over elements of a collection from
         * right to left.
         * @param collection Searches for a value in this list.
         * @param callback The function called per iteration. 
@@ -3106,7 +3108,7 @@ declare module _ {
     //_.forEachRight
     interface LoDashStatic {
         /**
-        * This method is like _.forEach except that it iterates over elements of a 
+        * This method is like _.forEach except that it iterates over elements of a
         * collection from right to left.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -3204,9 +3206,9 @@ declare module _ {
         * of the elements responsible for generating the key. The callback is bound to thisArg 
         * and invoked with three arguments; (value, index|key, collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -3333,10 +3335,10 @@ declare module _ {
         * the last element responsible for generating the key. The callback is bound to thisArg 
         * and invoked with three arguments; (value, index|key, collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -3453,10 +3455,10 @@ declare module _ {
         * The callback is bound to thisArg and invoked with three arguments; (value, index|key, 
         * collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will return 
+        * If a property name is provided for callback the created "_.pluck" style callback will return
         * the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return true 
+        * If an object is provided for callback the created "_.where" style callback will return true
         * for elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -3596,10 +3598,10 @@ declare module _ {
         * generate the criterion by which the value is ranked. The callback is bound to thisArg and invoked 
         * with three arguments; (value, index, collection).
         * 
-        * If a property name is provided for callback the created "_.pluck" style callback will return the 
+        * If a property name is provided for callback the created "_.pluck" style callback will return the
         * property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return true for 
+        * If an object is provided for callback the created "_.where" style callback will return true for
         * elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -3707,10 +3709,10 @@ declare module _ {
         * in the collection to generate the criterion by which the value is ranked. The callback 
         * is bound to thisArg and invoked with three arguments; (value, index, collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback 
+        * If a property name is provided for callback the created "_.pluck" style callback
         * will return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will 
+        * If an object is provided for callback the created "_.where" style callback will
         * return true for elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -4115,7 +4117,7 @@ declare module _ {
     //_.reduceRight
     interface LoDashStatic {
         /**
-        * This method is like _.reduce except that it iterates over elements of a collection from 
+        * This method is like _.reduce except that it iterates over elements of a collection from
         * right to left.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -4226,13 +4228,13 @@ declare module _ {
     //_.reject
     interface LoDashStatic {
         /**
-        * The opposite of _.filter this method returns the elements of a collection that 
+        * The opposite of _.filter this method returns the elements of a collection that
         * the callback does not return truey for.
         *
-        * If a property name is provided for callback the created "_.pluck" style callback 
+        * If a property name is provided for callback the created "_.pluck" style callback
         * will return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will 
+        * If an object is provided for callback the created "_.where" style callback will
         * return true for elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -4426,10 +4428,10 @@ declare module _ {
         * returns as soon as it finds a passing value and does not iterate over the entire collection. 
         * The callback is bound to thisArg and invoked with three arguments; (value, index|key, collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will return 
+        * If a property name is provided for callback the created "_.pluck" style callback will return
         * the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return true for 
+        * If an object is provided for callback the created "_.where" style callback will return true for
         * elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -4602,10 +4604,10 @@ declare module _ {
         * is, it will preserve the original sort order of equal elements. The callback is bound 
         * to thisArg and invoked with three arguments; (value, index|key, collection).
         *
-        * If a property name is provided for callback the created "_.pluck" style callback will 
+        * If a property name is provided for callback the created "_.pluck" style callback will
         * return the property value of the given element.
         *
-        * If an object is provided for callback the created "_.where" style callback will return 
+        * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param collection The collection to iterate over.
         * @param callback The function called per iteration.
@@ -4826,7 +4828,7 @@ declare module _ {
         /**
         * Creates a function that, when called, invokes the method at object[key] and prepends any 
         * additional bindKey arguments to those provided to the bound function. This method differs 
-        * from _.bind by allowing bound functions to reference methods that will be redefined or don't 
+        * from _.bind by allowing bound functions to reference methods that will be redefined or don't
         * yet exist. See http://michaux.ca/articles/lazy-function-definition-pattern.
         * @param object The object the method belongs to.
         * @param key The key of the method.
@@ -5065,7 +5067,7 @@ declare module _ {
     interface LoDashStatic {
         /**
         * Creates a function that, when called, invokes func with any additional partial arguments 
-        * prepended to those provided to the new function. This method is similar to _.bind except 
+        * prepended to those provided to the new function. This method is similar to _.bind except
         * it does not alter the this binding.
         * @param func The function to partially apply arguments to.
         * @param args Arguments to be partially applied.
@@ -5079,7 +5081,7 @@ declare module _ {
     //_.partialRight
     interface LoDashStatic {
         /**
-        * This method is like _.partial except that partial arguments are appended to those provided 
+        * This method is like _.partial except that partial arguments are appended to those provided
         * to the new function.
         * @param func The function to partially apply arguments to.
         * @param args Arguments to be partially applied.
@@ -5404,7 +5406,7 @@ declare module _ {
     //_.findKey
     interface LoDashStatic {
         /**
-        * This method is like _.findIndex except that it returns the key of the first element that 
+        * This method is like _.findIndex except that it returns the key of the first element that
         * passes the callback check, instead of the element itself.
         * @param object The object to search.
         * @param callback The function called per iteration.
@@ -5501,7 +5503,7 @@ declare module _ {
     //_.forInRight
     interface LoDashStatic {
         /**
-        * This method is like _.forIn except that it iterates over elements of a collection in the 
+        * This method is like _.forIn except that it iterates over elements of a collection in the
         * opposite order.
         * @param object The object to iterate over.
         * @param callback The function called per iteration.
@@ -5568,7 +5570,7 @@ declare module _ {
     //_.forOwnRight
     interface LoDashStatic {
         /**
-        * This method is like _.forOwn except that it iterates over elements of a collection in the 
+        * This method is like _.forOwn except that it iterates over elements of a collection in the
         * opposite order.
         * @param object The object to iterate over.
         * @param callback The function called per iteration.
@@ -6054,7 +6056,7 @@ declare module _ {
     //_.transform
     interface LoDashStatic {
         /**
-        * An alternative to _.reduce this method transforms object to a new accumulator object which is 
+        * An alternative to _.reduce this method transforms object to a new accumulator object which is
         * the result of running each of its elements through a callback, with each callback execution 
         * potentially mutating the accumulator object. The callback is bound to thisArg and invoked with 
         * four arguments; (accumulator, value, key, object). Callbacks may exit iteration early by 
@@ -6241,7 +6243,7 @@ declare module _ {
         * A micro-templating method that handles arbitrary delimiters, preserves whitespace, and 
         * correctly escapes quotes within interpolated code.
         *
-        * Note: In the development build, _.template utilizes sourceURLs for easier debugging. See 
+        * Note: In the development build, _.template utilizes sourceURLs for easier debugging. See
         * http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl
         *
         * For more information on precompiling templates see:
@@ -6297,7 +6299,7 @@ declare module _ {
     //_.unescape
     interface LoDashStatic {
         /**
-        * The inverse of _.escape this method converts the HTML entities &amp;, <, &gt;, &quot;, and 
+        * The inverse of _.escape this method converts the HTML entities &amp;, <, &gt;, &quot;, and
         * &#39; in string to their corresponding characters.
         * @param string The string to unescape.
         * @return The unescaped string.

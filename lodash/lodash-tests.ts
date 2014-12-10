@@ -1,5 +1,5 @@
 /// <reference path="lodash.d.ts" />
-
+var _: lodash.LoDashStatic = lodash;
 declare var $: any, jQuery: any;
 
 interface IFoodOrganic {
